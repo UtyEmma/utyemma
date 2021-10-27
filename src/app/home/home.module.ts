@@ -14,6 +14,7 @@ import { TeamComponent } from './components/team/team.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { MilestonesComponent } from './components/milestones/milestones.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { ContactComponent } from './components/contact/contact.component';
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    SharedModule
   ]
 })
 export class HomeModule { }
