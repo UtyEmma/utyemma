@@ -15,27 +15,35 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { MilestonesComponent } from './components/milestones/milestones.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { SharedModule } from '../shared/shared.module';
+import { BlogService } from '../blog/services/blog.service';
+import { TestimonialsService } from './services/testimonials.service';
+import { PortfolioService } from '../portfolio/services/portfolio.service';
 
 
 @NgModule({
-  declarations: [
-      HomeComponent,
-      HeroComponent,
-      AboutComponent,
-      ServicesComponent,
-      ClientsComponent,
-      BlogComponent,
-      PortfolioComponent,
-      PricingComponent,
-      TeamComponent,
-      SkillsComponent,
-      MilestonesComponent,
-      ContactComponent
-  ],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    SharedModule
-  ]
+    declarations: [
+        HomeComponent,
+        HeroComponent,
+        AboutComponent,
+        ServicesComponent,
+        ClientsComponent,
+        BlogComponent,
+        PortfolioComponent,
+        PricingComponent,
+        TeamComponent,
+        SkillsComponent,
+        MilestonesComponent,
+        ContactComponent
+    ],
+    imports: [
+        CommonModule,
+        HomeRoutingModule,
+        SharedModule
+    ],
+    providers: [
+        BlogService,
+        TestimonialsService,
+        PortfolioService
+    ]
 })
 export class HomeModule { }

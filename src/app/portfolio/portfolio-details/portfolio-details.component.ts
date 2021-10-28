@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PortfolioService } from '../services/portfolio.service';
 
 @Component({
   selector: 'app-portfolio-details',
@@ -7,9 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioDetailsComponent implements OnInit {
 
-  constructor() { }
+    projects : any
+    slug?: string
 
-  ngOnInit(): void {
-  }
+    constructor(
+        private _portfolioService : PortfolioService
+    ) { }
+
+    ngOnInit(): void {
+        this._fetchBlogPosts()
+    }
+
+    private _fetchBlogPosts(){
+        this._portfolioService.fetchSingleProject(this.slug).subscribe(
+            res => this._handleSuccess(res),
+            err => this._handleError(err),
+        )
+    }
+
+    private _handleSuccess(res: any){
+        console.log(res)
+        this.projects = res.data.posts
+    }
+
+    private _handleError(err: any){
+        console.log(err)
+    }
 
 }
