@@ -39,8 +39,8 @@
                 "src/assets/css/main.css"
             ],
             "scripts": [
-                "src/assets/js/modernizr.js",
                 "src/assets/js/pace.min.js",
+                "src/assets/js/modernizr.js",
                 "src/assets/js/jquery-3.2.1.min.js",
                 "src/assets/js/plugins.js",
                 "src/assets/js/main.js"
