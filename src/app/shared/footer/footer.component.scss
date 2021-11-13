@@ -111,3 +111,22 @@ footer .footer-social-divider:before {
     }
 
 }
+.footer-logo{
+    a{
+        display: flex;
+        align-items: center;
+        img{
+            width: 50%;
+            padding: 0;
+            margin: 0;
+        }
+        h2{
+            padding: 0;
+            margin: 0;
+            margin-left: 5px;
+            font-family: "librebaskerville-bold";
+            color: white;
+            font-weight: 700;
+        }
+    }
+}
