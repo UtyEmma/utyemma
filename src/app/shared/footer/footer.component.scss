@@ -130,3 +130,9 @@ footer .footer-social-divider:before {
         }
     }
 }
+
+.link-text{
+    &:hover{
+        color: #862121 !important;
+    }
+}
